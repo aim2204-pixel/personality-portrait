@@ -1,7 +1,7 @@
 // service-worker.js для PWA «Портрет личности» v1.0.8
 const CACHE_NAME = 'personality-portrait-v1.0.8';
 const CACHE_PREFIX = 'personality-portrait';
-
+ 
 // Критически важные файлы для кэширования (пути с учётом подпапки)
 const FILES_TO_CACHE = [
   '/personality-portrait/',
