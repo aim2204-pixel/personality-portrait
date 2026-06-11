@@ -906,6 +906,13 @@
             allInputs.forEach(inp => inp.addEventListener('input', autoSave));
         });
         function escapeHtml(str) { return String(str).replace(/[&<>]/g, function(m){ if(m==='&') return '&amp;'; if(m==='<') return '&lt;'; if(m==='>') return '&gt;'; return m;}); }
+
+// Регистрация service worker
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/personality-portrait/service-worker.js', { scope: '/personality-portrait/' })
+        .then(reg => console.log('SW registered:', reg))
+        .catch(err => console.log('SW registration failed:', err));
+}
     </script>
 </body>
 </html>
